@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController{
 
-    @ResponseBody
+
     @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public String test(){
-        return "This is for testing";
+    public String testApi(){
+        return "test";
     }
 }
