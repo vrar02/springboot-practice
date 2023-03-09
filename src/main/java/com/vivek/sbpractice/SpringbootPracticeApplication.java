@@ -64,10 +64,12 @@ public class SpringbootPracticeApplication {
 		employees1.forEach(System.out::println);
 
 		//find all employees which matches the company name containing "almar"
-		List<Employee> walEmployees = employeeService.readAllByCompanyContaining("almar");
-		walEmployees.forEach(System.out::println);
+		List<Employee> almarEmployees = employeeService.readAllByCompanyContaining("almar");
+		almarEmployees.forEach(System.out::println);
 
-
+		//find all employees by company name...
+		List<Employee> walmartEmp = employeeService.readAllByCompany("walmart");
+		walmartEmp.forEach(System.out::println);
 	}
 
 }

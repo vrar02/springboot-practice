@@ -19,6 +19,8 @@ public interface EmployeeService {
 
     List<Employee> readAllByCompanyContaining(String word);
 
+    List<Employee> readAllByCompany(String comp);
+
 
     void delete(int id);
 
