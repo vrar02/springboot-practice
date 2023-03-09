@@ -1,7 +1,6 @@
 package com.vivek.sbpractice;
 
 import com.vivek.sbpractice.entities.Employee;
-import com.vivek.sbpractice.repositories.EmployeeRepository;
 import com.vivek.sbpractice.services.EmployeeService;
 import com.vivek.sbpractice.services.EmployeeServiceImpl;
 import org.springframework.boot.SpringApplication;
@@ -70,6 +69,16 @@ public class SpringbootPracticeApplication {
 		//find all employees by company name...
 		List<Employee> walmartEmp = employeeService.readAllByCompany("walmart");
 		walmartEmp.forEach(System.out::println);
+
+		//find all employees by company name...
+		List<Object[]> walmartEmp2 = employeeService.readAllByCompanyNative("walmart");
+		walmartEmp2.forEach(
+				a->{
+					System.out.print((String)a[0]);
+					System.out.print("-");
+					System.out.println((String)a[1]);
+				}
+		);
 	}
 
 }

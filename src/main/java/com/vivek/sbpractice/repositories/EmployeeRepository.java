@@ -18,4 +18,7 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
     @Query("select e from Employee e where e.company=:comp")
     List<Employee> allEmployees(@Param("comp") String comp);
 
+    @Query(nativeQuery = true,value = "select e.emp_name,e.emp_company from employee e where e.emp_company=:comp")
+    List<Object[]> allEmployeesNative(String comp);
+
 }

@@ -56,6 +56,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public List<Object[]> readAllByCompanyNative(String comp) {
+        return employeeRepository.allEmployeesNative(comp);
+    }
+
+    @Override
     public void delete(int id) {
         employeeRepository.deleteById(id);
     }

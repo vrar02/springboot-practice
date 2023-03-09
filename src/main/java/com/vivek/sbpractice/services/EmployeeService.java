@@ -21,6 +21,8 @@ public interface EmployeeService {
 
     List<Employee> readAllByCompany(String comp);
 
+    List<Object[]> readAllByCompanyNative(String comp);
+
 
     void delete(int id);
 
