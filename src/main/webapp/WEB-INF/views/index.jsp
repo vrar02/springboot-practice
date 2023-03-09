@@ -10,5 +10,14 @@
     <button type="submit">Submit</button>
 </form>
 
+<br>
+<hr>
+<form action="imageUpload" method="post" enctype="multipart/form-data">
+    <label>Upload Image</label>
+    <input type="file" name="img"/>
+    <br>
+    <button type="submit">Click</button>
+</form>
+
 </body>
 </html>

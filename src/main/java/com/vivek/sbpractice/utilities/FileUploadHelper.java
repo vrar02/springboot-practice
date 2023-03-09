@@ -11,8 +11,7 @@ import java.io.IOException;
 @Component
 public class FileUploadHelper {
 
-    public final String UPLOAD_DIR="D:\\my_files\\";
-    public boolean uploadFile(MultipartFile file) throws IOException {
+    public boolean uploadFile(MultipartFile file, String UPLOAD_DIR) throws IOException {
         boolean f=false;
 
         try{
