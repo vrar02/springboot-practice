@@ -1,6 +1,7 @@
 package com.vivek.sbpractice.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,5 +25,9 @@ public class Employee {
 
     @Column(name="emp_company")
     private String company;
+
+    @JsonManagedReference
+    @OneToOne(cascade = CascadeType.ALL)
+    private Address address;
 
 }

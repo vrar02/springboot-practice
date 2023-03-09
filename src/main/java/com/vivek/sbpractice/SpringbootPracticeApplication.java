@@ -53,7 +53,7 @@ public class SpringbootPracticeApplication {
 
 		//update
 		emp_read.setName("maneesh");
-		employeeService.update(emp_read);
+		employeeService.update(emp_read,emp_read.getId());
 
 		//delete
 		employeeService.delete(1);

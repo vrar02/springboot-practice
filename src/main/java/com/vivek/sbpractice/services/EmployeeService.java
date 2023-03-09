@@ -8,7 +8,7 @@ public interface EmployeeService {
 
     Employee create(Employee employee);
 
-    Employee update(Employee employee);
+    Employee update(Employee employee, int id);
 
 
     Employee read(int id);
